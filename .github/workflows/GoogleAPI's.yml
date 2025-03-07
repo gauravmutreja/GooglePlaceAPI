@@ -16,4 +16,4 @@ jobs:
       - uses: actions/checkout@master
       - uses: matt-ball/newman-action@master
         with:
-          collection: GooglePlaceAPI.json
+          collection: Google Place APIs.postman_collection.json
