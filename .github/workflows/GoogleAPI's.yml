@@ -1,0 +1,19 @@
+name: Newman Run
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+  - cron: "0 2 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  newman:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: matt-ball/newman-action@master
+        with:
+          collection: /Users/gauravmutreja/Projects/Git Practice/GooglePlaceAPI.json
